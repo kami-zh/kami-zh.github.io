@@ -1,118 +1,32 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>About kami</title>
-  <style>
+---
+layout: default
+---
 
-    body {
-      background-color: #eee;
-      font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-      font-size: 90%;
-    }
+{% for post in paginator.posts %}
+<div class="post">
+  <div class="post__header">
+    <h1 class="post-header__heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
-    .container {
-      width: 440px;
-      margin: 20px auto;
-      padding: 0 20px;
-      background-color: #fff;
-    }
-
-    .header {
-      padding: 40px 0;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .header h1 {
-      margin: 0;
-      font-size: 150%;
-    }
-
-    .content {
-    }
-
-    .content .section {
-      overflow: hidden;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .content .section:last-child {
-      border: none;
-    }
-
-    .content .section h2 {
-      font-size: 120%;
-    }
-
-    .content .section img {
-      float: left;
-      margin-right: 10px;
-    }
-
-    .content .section span {
-      font-weight: bold;
-    }
-
-    .content .section p {
-      font-size: 85%;
-    }
-
-    .content .section ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .footer {
-      padding: 20px 0;
-      border-top: 1px solid #ddd;
-    }
-
-    .footer p {
-      margin: 0;
-      text-align: center;
-    }
-
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>About kami</h1>
-    </div>
-    <div class="content">
-      <div class="section">
-        <h2>Profile</h2>
-        <img src="https://pbs.twimg.com/profile_images/459618387639803904/wYqFUz2Z.png" alt="profile" width="120">
-        <span>kami</span>（<a href="https://twitter.com/kami30k">@kami30k</a>）
-        <p>
-          1987年12月生まれ、熊本出身。
-          東京大学大学院を修了後、インターネット関連の上場企業に入社。
-          その後、教育系ベンチャー企業を設立し、取締役に就任。
-          現在は同職を辞任し、個人でサービスを制作している。
-        </p>
-      </div>
-      <div class="section">
-        <h2>Service</h2>
-        <ul>
-          <li><a href="http://iinelog.com/">iine log</a></li>
-          <li><a href="http://webdesignbookmarks.com/">Web Design Bookmarks</a></li>
-          <li><a href="http://89channel.com/">89channel</a></li>
-          <li><a href="http://hiramekicafe.com/">HIRAMEKI CAFE</a></li>
-          <li><a href="http://shomeidesign.com/">SHOMEI DESIGN</a></li>
-          <li><a href="https://kptlog.com/">KPT LOG</a></li>
-        </ul>
-      </div>
-      <div class="section">
-        <h2>RubyGems</h2>
-        <ul>
-          <li><a href="https://rubygems.org/gems/ratio_for_design">ratio_for_design</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer">
-      <p>&copy; 2014 kami.</p>
-    </div>
+    <ul class="post-header__list">
+      <li class="post-header__item"><a href="http://b.hatena.ne.jp/entry/{{ site.url }}{{ post.url }}" class="bookmark-widget-counter"><img src="http://b.st-hatena.com/entry/image/{{ site.url }}{{ post.url }}"></a></li>
+      <li class="post-header__item"><a href="">{{ post.category }}</a></li>
+      <li class="post-header__item"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: '%b %-d, %Y' }}</a></li>
+    </ul>
   </div>
-</body>
-</html>
+
+  <div class="post__content">
+    {{ post.content }}
+  </div>
+
+  <ul class="post__share-list">
+    <li class="post__share-item"><a class="hatena hatena-bookmark-button" data-hatena-bookmark-layout="simple" href="http://b.hatena.ne.jp/entry/{{ site.url }}{{ post.url }}" target="_blank"><i class="fa fa-hatena"></i></a><script src="http://b.st-hatena.com/js/bookmark_button.js"></script></li>
+    <li class="post__share-item"><a href="http://twitter.com/share?url={{ site.url }}{{ post.url }}&amp;text={{ post.title }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <li class="post__share-item"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+  </ul>
+
+  <ul class="post__pagination">
+    {% if post.next %}<li class="post-pagination__item post-pagination__item--next"><a href="{{ post.next.url }}">Next post &raquo;</a></li>{% endif %}
+    {% if post.previous %}<li class="post-pagination__item post-pagination__item--previous"><a href="{{ post.previous.url }}">&laquo; Previous post</a></li>{% endif %}
+  </ul>
+</div>
+{% endfor %}

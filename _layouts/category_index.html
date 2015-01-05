@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for post in site.categories[page.category] %}
+  <div class="post">
+    <div class="post__header">
+      <h1 class="post-header__heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+
+      <ul class="post-header__list">
+        <li class="post-header__item"><a href="http://b.hatena.ne.jp/entry/{{ site.url }}{{ post.url }}" class="bookmark-widget-counter"><img src="http://b.st-hatena.com/entry/image/{{ site.url }}{{ post.url }}"></a></li>
+        <li class="post-header__item"><a href="">{{ page.category | capitalize }}</a></li>
+        <li class="post-header__item"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: '%b %-d, %Y' }}</a></li>
+      </ul>
+    </div>
+
+    <div class="post__content">
+      {{ post.content }}
+    </div>
+
+    <ul class="post__share-list">
+      <li class="post__share-item"><a class="hatena hatena-bookmark-button" data-hatena-bookmark-layout="simple" href="http://b.hatena.ne.jp/entry/{{ site.url }}{{ post.url }}" target="_blank"><i class="fa fa-hatena"></i></a><script src="http://b.st-hatena.com/js/bookmark_button.js"></script></li>
+      <li class="post__share-item"><a href="http://twitter.com/share?url={{ site.url }}{{ post.url }}&amp;text={{ post.title }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li class="post__share-item"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    </ul>
+  </div>
+  {% endfor %}
+</div>

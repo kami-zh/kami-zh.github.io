@@ -1,0 +1,325 @@
+body {
+  color: #333;
+  font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+a {
+  color: #369;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  -webkit-font-smoothing: antialiased;
+}
+
+.fa-hatena:before {
+  content: 'B!';
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+/* -------------------------------------
+* .container
+* ---------------------------------- */
+
+.container {
+  position: relative;
+  width: 960px;
+  margin: 80px auto 40px;
+}
+
+/* -------------------------------------
+* .sidebar
+* ---------------------------------- */
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  font-size: 80%;
+  text-align: right;
+}
+
+.sidebar__section {
+  margin-bottom: 40px;
+}
+
+.sidebar__section:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.sidebar-section__heading {
+  margin: 0 0 16px;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+.sidebar-section__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-section__item {
+  margin-bottom: 4px;
+}
+
+.sidebar-section__item-count {
+  margin-left: 4px;
+  color: #999;
+  font-size: 90%;
+}
+
+/* -------------------------------------
+* .profile
+* ---------------------------------- */
+
+.profile {
+}
+
+.profile__image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+  border-radius: 100%;
+}
+
+.profile__name {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.profile__screenname {
+  display: block;
+  margin-bottom: 8px;
+  color: #999;
+  font-size: 90%;
+}
+
+.profile__description {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.profile__icon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile__icon-item {
+  display: inline-block;
+}
+
+.profile__icon-item a {
+  display: block;
+  width: 18px;
+  border-radius: 2px;
+  background-color: #666;
+  color: #fff;
+  font-size: 90%;
+  line-height: 18px;
+  text-align: center;
+  transition: 200ms;
+}
+
+.profile__icon-item a:hover {
+  background-color: #fff;
+  color: #666;
+}
+
+/* -------------------------------------
+* .footer
+* ---------------------------------- */
+
+.footer {
+  color: #666;
+  font-size: 90%;
+}
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  margin-bottom: 4px;
+}
+
+.footer__item a {
+  color: #666;
+}
+
+/* -------------------------------------
+* .content
+* ---------------------------------- */
+
+.content {
+  width: 480px;
+  margin: auto;
+}
+
+/* -------------------------------------
+* .post
+* ---------------------------------- */
+
+.posts {
+  .post { margin-bottom: 20px; }
+}
+
+.post {
+  overflow: hidden;
+}
+
+.post__header {
+  margin: 20px 0 40px;
+  font-family: 'Hiragino Mincho ProN', serif;
+  text-align: right;
+}
+
+.post-header__heading {
+  margin: 0 auto 4px;
+  font-size: 120%;
+  font-weight: normal;
+}
+
+.post-header__heading a {
+  color: #333;
+}
+
+.post-header__list {
+  clear: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-header__item {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 80%;
+}
+
+.post-header__item a {
+  color: #999;
+}
+
+.post-header__item img {
+  vertical-align: text-top;
+}
+
+.post__content {
+  font-size: 90%;
+  line-height: 2;
+  text-align: justify;
+}
+
+.post__content a {
+  text-decoration: underline;
+}
+
+.post__content a:hover {
+  text-decoration: none;
+}
+
+.post__content h2 {
+  margin: 40px 0 40px;
+  font-size: 150%;
+  font-weight: normal;
+  text-align: center;
+}
+
+.post__content h3 {
+  margin: 40px 0 20px;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+.post__content ol,
+.post__content ul {
+  padding-left: 24px;
+}
+
+.post__content code {
+  padding: 2px 5px;
+  border-radius: 2px;
+  background-color: #f6f6f6;
+  color: #666;
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 90%;
+}
+
+.highlight {
+  padding: 8px 16px;
+  border-radius: 2px;
+  line-height: 1.8;
+
+  pre {
+    margin: 0;
+  }
+
+  code {
+    padding: auto;
+    border-radius: 0;
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+.post__share-list {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  text-align: right;
+}
+
+.post__share-item {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.post__share-item a {
+  display: block;
+  width: 32px;
+  border-radius: 2px;
+  background-color: #eee;
+  color: #666;
+  font-size: 80%;
+  line-height: 32px;
+  text-align: center;
+  transition: 200ms;
+}
+
+.post__share-item a:hover {
+  background-color: #666;
+  color: #eee;
+}
+
+.post__pagination {
+  overflow: hidden;
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  font-size: 90%;
+}
+
+.post-pagination__item {
+}
+
+.post-pagination__item--previous {
+  float: left;
+}
+
+.post-pagination__item--next {
+  float: right;
+}

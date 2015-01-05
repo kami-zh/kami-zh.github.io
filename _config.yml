@@ -1,0 +1,25 @@
+#
+# Site settings
+#
+
+title: kami
+
+description: kami's blog.
+
+baseurl:
+
+url: http://localhost:4000
+
+#
+# Build settings
+#
+
+markdown: kramdown
+
+permalink: /posts/:title/
+
+category_dir: /posts/categories/
+
+paginate: 1
+
+paginate_path: /posts/page/:num/

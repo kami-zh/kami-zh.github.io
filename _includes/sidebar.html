@@ -1,0 +1,45 @@
+<div class="sidebar">
+  <div class="profile sidebar__section">
+    <a href="{{ site.url }}"><img src="{{ site.url }}/images/profile.jpeg" class="profile__image"></a>
+
+    <span class="profile__name">kami</span>
+
+    <span class="profile__screenname">@kami30k</span>
+
+    <span class="profile__description">Rubyist</span>
+
+    <ul class="profile__icon-list">
+      <li class="profile__icon-item"><a href="https://github.com/kami30k"><i class="fa fa-github"></i></a></li>
+      <li class="profile__icon-item"><a href="https://twitter.com/kami30k"><i class="fa fa-twitter"></i></a></li>
+      <li class="profile__icon-item"><a href="{{ '/feed.xml' | prepend: site.baseurl }}"><i class="fa fa-rss"></i></a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar__section">
+    <h3 class="sidebar-section__heading">MENU</h3>
+
+    <ul class="sidebar-section__list">
+      <li class="sidebar-section__item"><a href="">Profile</a></li>
+      <li class="sidebar-section__item"><a href="">Service</a></li>
+      <li class="sidebar-section__item"><a href="">OSS</a></li>
+      <li class="sidebar-section__item"><a href="">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar__section">
+    <h3 class="sidebar-section__heading">CATEGORY</h3>
+
+    <ul class="sidebar-section__list">
+      {% for category in site.categories %}
+      <li class="sidebar-section__item"><a href="{{ site.url }}/posts/categories/{{ category | first }}">{{ category | first | capitalize }}</a><span class="sidebar-section__item-count">{{ category | last | size }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="footer sidebar__section">
+    <ul class="footer__list">
+      <li class="footer__item">Powered by <a href="http://jekyllrb.com/">Jekyll</a></li>
+      <li class="footer__item">&copy; 2015 kami</li>
+    </ul>
+  </div>
+</div>
