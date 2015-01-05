@@ -19,20 +19,11 @@
     <h3 class="sidebar-section__heading">MENU</h3>
 
     <ul class="sidebar-section__list">
+      <li class="sidebar-section__item"><a href="{{ site.url }}">Home</a></li>
       <li class="sidebar-section__item"><a href="">Profile</a></li>
       <li class="sidebar-section__item"><a href="">Service</a></li>
       <li class="sidebar-section__item"><a href="">OSS</a></li>
       <li class="sidebar-section__item"><a href="">Contact</a></li>
-    </ul>
-  </div>
-
-  <div class="sidebar__section">
-    <h3 class="sidebar-section__heading">CATEGORY</h3>
-
-    <ul class="sidebar-section__list">
-      {% for category in site.categories %}
-      <li class="sidebar-section__item"><a href="{{ site.url }}/posts/categories/{{ category | first }}">{{ category | first | capitalize }}</a><span class="sidebar-section__item-count">{{ category | last | size }}</span></li>
-      {% endfor %}
     </ul>
   </div>
 
