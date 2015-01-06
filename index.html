@@ -5,12 +5,12 @@ layout: default
 {% for post in paginator.posts %}
 <div class="post">
   <div class="post__header">
-    <h1 class="post-header__heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <h1 class="post__header__heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
-    <ul class="post-header__list">
-      <li class="post-header__item"><a href="http://b.hatena.ne.jp/entry/{{ site.url }}{{ post.url }}" class="bookmark-widget-counter"><img src="http://b.st-hatena.com/entry/image/{{ site.url }}{{ post.url }}"></a></li>
-      <li class="post-header__item">{{ post.category }}</li>
-      <li class="post-header__item"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: '%b %-d, %Y' }}</a></li>
+    <ul class="post__header__list">
+      <li class="post__header__item"><a href="http://b.hatena.ne.jp/entry/{{ site.url }}{{ post.url }}" class="bookmark-widget-counter"><img src="http://b.st-hatena.com/entry/image/{{ site.url }}{{ post.url }}"></a></li>
+      <li class="post__header__item">{{ post.category }}</li>
+      <li class="post__header__item"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: '%b %-d, %Y' }}</a></li>
     </ul>
   </div>
 
@@ -25,8 +25,8 @@ layout: default
   </ul>
 
   <ul class="post__pagination">
-    {% if post.next %}<li class="post-pagination__item post-pagination__item--next"><a href="{{ post.next.url }}">Next post &raquo;</a></li>{% endif %}
-    {% if post.previous %}<li class="post-pagination__item post-pagination__item--previous"><a href="{{ post.previous.url }}">&laquo; Previous post</a></li>{% endif %}
+    {% if post.next %}<li class="post__pagination__item post__pagination__item--next"><a href="{{ post.next.url }}">Next post &raquo;</a></li>{% endif %}
+    {% if post.previous %}<li class="post__pagination__item post__pagination__item--previous"><a href="{{ post.previous.url }}">&laquo; Previous post</a></li>{% endif %}
   </ul>
 </div>
 {% endfor %}
