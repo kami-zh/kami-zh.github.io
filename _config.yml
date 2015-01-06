@@ -8,6 +8,7 @@ description: kami's blog.
 
 baseurl:
 
+# url: http://localhost:4000
 url: http://kami30k.github.io
 
 #
