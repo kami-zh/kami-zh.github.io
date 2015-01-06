@@ -264,6 +264,11 @@ strong {
         color: inherit;
       }
     }
+
+    .hatena-bookmark-count,
+    .github-star {
+      vertical-align: middle;
+    }
   }
 
   #{&}__share-list {
