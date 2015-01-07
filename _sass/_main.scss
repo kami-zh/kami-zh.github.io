@@ -69,21 +69,19 @@ strong {
   width: 200px;
   font-size: 80%;
   text-align: right;
-
-  #{&}__section {
-    margin-bottom: 40px;
-
-    &:last-child {
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
-  }
 }
 
 // .sidebar__section
 
 .sidebar__section {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
   #{&}__heading {
     margin: 0 0 16px;
     font-size: 100%;
@@ -197,12 +195,6 @@ strong {
 .post {
   overflow: hidden;
 
-  #{&}__header {
-    margin: 20px 0 40px;
-    font-family: 'Hiragino Mincho ProN', serif;
-    text-align: right;
-  }
-
   #{&}__content {
     font-size: 90%;
     line-height: 2;
@@ -299,19 +291,15 @@ strong {
       }
     }
   }
-
-  #{&}__pagination {
-    overflow: hidden;
-    list-style: none;
-    margin: 40px 0 0;
-    padding: 0;
-    font-size: 90%;
-  }
 }
 
 // .post__header
 
 .post__header {
+  margin: 20px 0 40px;
+  font-family: 'Hiragino Mincho ProN', serif;
+  text-align: right;
+
   #{&}__heading {
     margin: 0 auto 4px;
     font-size: 120%;
@@ -347,6 +335,12 @@ strong {
 // .post__pagination
 
 .post__pagination {
+  overflow: hidden;
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  font-size: 90%;
+
   #{&}__item {
   }
 
