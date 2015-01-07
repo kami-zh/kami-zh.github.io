@@ -18,6 +18,7 @@
   top: auto;
   left: auto;
   width: 100%;
+  margin-bottom: -20px;
   font-size: 80%;
   text-align: center;
 }
@@ -28,10 +29,23 @@
   padding-bottom: 40px;
   border-bottom: 1px solid whiten($base_color, 95%);
 
+  #{&}__heading {
+    display: none;
+  }
+
   #{&}__item {
     display: inline;
     margin: auto 2px;
   }
+}
+
+/* -------------------------------------
+ * .menu
+ * ---------------------------------- */
+
+.menu {
+  margin-top: -20px;
+  padding-bottom: 20px;
 }
 
 /* -------------------------------------
