@@ -17,6 +17,9 @@ url: http://kami30k.com
 
 markdown: redcarpet
 
+redcarpet:
+  extensions: ['tables']
+
 permalink: /posts/:title/
 
 paginate: 1

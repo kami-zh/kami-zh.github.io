@@ -231,6 +231,22 @@ strong {
       padding-left: 24px;
     }
 
+    table {
+      margin: 20px 0;
+      font-size: 90%;
+    }
+
+    th {
+      padding: 8px;
+      border: 1px solid whiten($base_color, 95%);
+      text-align: center;
+    }
+
+    td {
+      padding: 8px;
+      border: 1px solid whiten($base_color, 95%);
+    }
+
     code {
       padding: 2px 5px;
       border-radius: 2px;
