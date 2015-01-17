@@ -198,7 +198,7 @@ strong {
   #{&}__content {
     font-size: 90%;
     line-height: 2;
-    text-align: justify;
+    // text-align: justify;
 
     a {
       text-decoration: underline;
@@ -254,6 +254,13 @@ strong {
       color: whiten($base_color, 25%);
       font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
       font-size: 80%;
+    }
+
+    blockquote {
+      overflow: hidden;
+      margin: 0;
+      padding: 0 16px;
+      background-color: whiten($base_color, 95%);
     }
 
     .highlight {
