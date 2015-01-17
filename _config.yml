@@ -18,7 +18,7 @@ url: http://kami30k.com
 markdown: redcarpet
 
 redcarpet:
-  extensions: ['tables']
+  extensions: ['tables', 'no_intra_emphasis']
 
 permalink: /posts/:title/
 
